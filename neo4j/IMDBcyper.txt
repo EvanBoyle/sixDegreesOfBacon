@@ -4,5 +4,4 @@ create(actor{fname : "Elijah", lname : "Wood", birthday : "MMDDYYY", bio : "Elij
 ..., //here as well
 create(target{fname : "Kevin", lname : "Bacon", birthday : "MMDDYYY", bio : "Kevin Bacon was born on MMDDYYY in some country.."}),
 (actor)-[:FRIENDS {movie : "Beyond All Boundaries"}]->(target),
-(target)-[:FRIENDS {movie : "Beyond All Boundaries"}]->(actor);
 //link found via oracleofbacon.org
