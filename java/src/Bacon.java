@@ -78,7 +78,7 @@ public class Bacon {
 			PreparedStatement traverse;//prep statement to discover a nodes neighbors
 			
 			String traverseStatement = "SELECT actorID FROM seenIn WHERE movieID IN " +
-					"(SELECT movieID FROM seenIn WHERE actorID = ?";
+					"(SELECT movieID FROM seenIn WHERE actorID = ?)";
 			traverse = con.prepareStatement(traverseStatement);
 			
 			traverse.setInt(1, origActor); // bind variables to prep statement
