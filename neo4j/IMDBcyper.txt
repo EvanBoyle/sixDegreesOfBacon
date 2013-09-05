@@ -1,7 +1,7 @@
-create(actor{fname : "Elijah", lname : "Wood", birthday : "MMDDYYY", bio : "Elijah Wood was born on MMDDYYY in some country.."}), 
+create(actor:Actor{fname : "Elijah", lname : "Wood", birthday : "MMDDYYY", bio : "Elijah Wood was born on MMDDYYY in some country.."}), 
 ..., //other node entries go here
 ..., //and here
 ..., //here as well
-create(target{fname : "Kevin", lname : "Bacon", birthday : "MMDDYYY", bio : "Kevin Bacon was born on MMDDYYY in some country.."}),
+create(target:Actor{fname : "Kevin", lname : "Bacon", birthday : "MMDDYYY", bio : "Kevin Bacon was born on MMDDYYY in some country.."}),
 (actor)-[:FRIENDS {movie : "Beyond All Boundaries"}]->(target),
 //link found via oracleofbacon.org
