@@ -1,0 +1,27 @@
+via rest api (unfotunately wont search by bfs automatically):
+
+     POST http://localhost:7474/db/data/node/KevinBacon/path
+    Accept: application/json; charset=UTF-8
+    Content-Type: application/json 
+
+{
+  "to" : "http://localhost:7474/db/data/node/ElijahWood",
+  "max_depth" : 100,
+  "relationships" : [{
+    "direction" : "all",
+    "type" : "FRIENDS"
+  }],
+  "algorithm" : "shortestPath"
+}
+
+other options
+
+-rest traversal api - would allow us to specify breadth first order
+-cypher - could potentially be slow, but simple and elegant;
+
+MATCH p = shortestPath((actor:Actor)-[*..100]-(target:Actor))
+WHERE actor.fname = 'Elijah' AND actor.lname = 'Wood' AND target.fname = 'Kevin' AND target.lname = 'Bacon'
+RETURN p
+
+
+-java core api- probably fastest option, give us most control over traversal.  Didn't have time to do much exploring.
